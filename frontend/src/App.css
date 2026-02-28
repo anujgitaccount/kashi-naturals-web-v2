@@ -1,0 +1,211 @@
+/* Kashi Naturals Custom Styles - Following Warm AI Design Guidelines */
+
+:root {
+  /* Foundation Colors - Warm Natural Theme */
+  --bg-page: #FFF9F2;
+  --bg-card: #FFFFFF;
+  --bg-section: rgba(255, 244, 232, 0.6);
+  --bg-overlay: rgba(255, 255, 255, 0.95);
+  
+  /* Text Colors */
+  --text-primary: #232323;
+  --text-secondary: #353535;
+  --text-muted: #353535;
+  
+  /* Borders */
+  --border-primary: #999999;
+  --border-input: #999999;
+  --border-input-focus: #4D4D4D;
+  --border-light: rgba(153, 153, 153, 0.3);
+  
+  /* Natural Product Colors */
+  --mustard-yellow: #E6B845;
+  --earth-brown: #8B6F47;
+  --natural-green: #7A9B76;
+  --warm-cream: #FFF4E6;
+  
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  
+  /* Gradients - Use Sparingly */
+  --gradient-hero-warm: linear-gradient(
+    135deg,
+    rgba(254, 241, 220, 1) 0%,
+    rgba(255, 249, 242, 0.95) 50%,
+    rgba(254, 241, 220, 1) 100%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Typography Scale */
+.heading-hero {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.heading-1 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.body-medium {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  min-height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--text-secondary);
+  transform: scale(1.02);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  min-height: 2.5rem;
+  backdrop-filter: blur(4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* Product Card */
+.product-card {
+  background: var(--bg-card);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Feature Card */
+.feature-card {
+  background: var(--bg-card);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Container System */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* Spacing */
+.space-xs { margin: 0.5rem; }
+.space-sm { margin: 1rem; }
+.space-md { margin: 1.5rem; }
+.space-lg { margin: 2rem; }
+.space-xl { margin: 3rem; }
+.space-2xl { margin: 5rem; }
+
+.pad-xs { padding: 0.5rem; }
+.pad-sm { padding: 1rem; }
+.pad-md { padding: 1.5rem; }
+.pad-lg { padding: 2rem; }
+.pad-xl { padding: 3rem; }
+.pad-2xl { padding: 5rem; }
+
+/* Smooth Transitions */
+button, a, .card {
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
